@@ -38,7 +38,13 @@ const ContactForm = ({ addContact }) => {
         <div className={css.container}>
           {" "}
           <label className={css.label}>Number</label>
-          <Field className={css.input} type="text" name="number" />
+          <Field
+            className={css.input}
+            type="tel"
+            name="number"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="000-00-00"
+          />
           <ErrorMessage name="number" as="span" className="css.error" />
         </div>
         <button className={css.btn} type="submit">
