@@ -1,6 +1,6 @@
 import css from "./SearchBox.module.css";
 
-const SearchBox = ({ changeInput, value }) => {
+const SearchBox = ({ onSearchChange, value }) => {
   return (
     <div className={css.div}>
       <label className={css.label}>
@@ -9,7 +9,7 @@ const SearchBox = ({ changeInput, value }) => {
           className={css.input}
           type="text"
           value={value}
-          onChange={(e) => changeInput(e.target.value)}
+          onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Search"
         />
       </label>
